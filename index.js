@@ -28,5 +28,10 @@ fs
 		console.log(error);
 	})
 	.on('end', () => {
+		console.log(
+			habitablePlanets.map((planet) => {
+				return planet['kepler_name'];
+			})
+		);
 		console.log(` the habitable planets are ${habitablePlanets.length}`);
 	});
